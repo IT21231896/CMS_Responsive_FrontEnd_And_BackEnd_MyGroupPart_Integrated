@@ -1,0 +1,176 @@
+/* Container styling */
+.main-tasks-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  margin-left: 16%;
+}
+
+.add-task-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+
+  .head h1{
+    color: #24757E;
+  }
+  
+  .breadcrumb {
+    margin-top: 20px; /*!important - if want add do force to add this atributre style- !important*/
+ }
+
+/* Back button styling */
+.back-btn {
+  width: auto;
+  background-color: #158d93;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background-color: #11777e; 
+  color: #f0f0f0; 
+  transform: scale(1.05); 
+  transition: all 0.3s ease; 
+}
+
+
+.back-button-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button-area .but-inside{
+  width: 100%;
+  max-width: 800px;
+}
+
+  .content {
+    width: 100%;
+    max-width: 800px;
+    background-color: #e3e3e3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Title styling */
+  .page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .task-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-form label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .task-form input,
+  .task-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #cfcfcf;
+  }
+  
+  .task-form textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  input::placeholder, 
+textarea::placeholder {
+  color: #333; /* Black placeholder text */
+  font-weight:lighter; /* Bold font for placeholders */
+  opacity: 1; /* Ensures full visibility of the color */
+  font-style: italic;
+}
+  
+  .back-button-area .send-btn {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .send-btn:hover {
+    background-color: #005959;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+
+    .main-tasks-container {
+      padding-top: 80px;
+      padding-left:0%;
+      padding-right:0%;
+      padding-bottom:0%;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .head h1{
+      padding-top: 40px;
+      font-size: calc(1.375rem + 1.5vw);
+      font-weight: bold !important;
+     }
+
+    .add-task-container {
+      padding: 0%;
+    }
+
+    .content {
+      padding: 15px;
+    }
+  
+    .page-title {
+      font-size: 20px;
+    }
+  
+    .back-button-area .send-btn {
+      font-size: 14px;
+      width: 40%;
+      margin-bottom: 20px;
+    }
+
+    .back-button-area{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .back-button-area .but-inside{
+      width: 100%;
+      max-width: 800px;
+      padding-left: 0%;
+    }
+
+    .breadcrumb {
+      display: none;
+    }
+  }
+  

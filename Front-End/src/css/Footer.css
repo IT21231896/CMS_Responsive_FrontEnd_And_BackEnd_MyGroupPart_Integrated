@@ -1,0 +1,124 @@
+/* footer.css */
+
+/* Apply styling to the entire footer */
+footer {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: auto;
+ 
+}
+
+/* For heading tags inside footer */
+footer h5 {
+  font-size: 1rem; /* Reduced font size for headings */
+  margin-bottom: 1rem;
+}
+
+/* For list items inside footer */
+footer ul li {
+  font-size: 0.75rem; /* Reduced font size for list items */
+}
+
+/* For social media icons */
+footer .footer-social-icon {
+  font-size: 1.2rem; /* Reduced font size for social icons */
+}
+
+/* For paragraphs in the contact section */
+.contact-item {
+  margin-bottom: 5px; /* Reduces the space between paragraphs */
+}
+.contact-item:last-child {
+  margin-bottom: 1.5rem; /* Removes bottom margin for the last item */
+}
+
+.footer-contact-text {
+  font-size: 0.75rem;  /* Adjust this value to your desired font size */
+}
+
+.footer-contact-text i {
+  font-size: 1rem;  /* You can also reduce the icon size if needed */
+}
+
+.contact-item {
+  margin-bottom: 5px; /* Reduce the vertical space between items if needed */
+}
+.container .row {
+  flex-wrap: wrap !important;
+}
+
+@media (max-width: 768px) {
+
+  /* Style for the footer container */
+.container {
+display: flex;
+flex-direction: row; /* Arrange items in a row */
+justify-content: space-between; /* Space out the sections */
+align-items: flex-start; /* Align items to the top */
+}
+
+/* Adjust the "Industries" and "Our Partners" sections */
+.col-md-2 {
+flex: 1; /* Allow sections to take equal space */
+margin-bottom: 20px;
+}
+
+/* Stack "Industries" and "Our Partners" sections */
+footer .col-md-2 {
+  margin-left:40px;
+  margin-bottom: 20px;
+}
+footer .text-dark{
+  margin-top:20px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+/* Hide "Contact Us," logo, and copyright for mobile */
+footer .col-md-3, /* Contact Us */
+footer .col-md-1, /* Logo */
+footer .fs-6 {    /* Copyright */
+  display: none;
+}
+}
+/* Responsive Design for Mobile (480px and below) */
+@media (max-width: 480px) {
+
+/* Style for the footer container */
+.container {
+display: flex;
+flex-direction: row; /* Arrange items in a row */
+justify-content: space-between; /* Space out the sections */
+align-items: flex-start; /* Align items to the top */
+}
+
+/* Adjust the "Industries" and "Our Partners" sections */
+.col-md-2 {
+flex: 1; /* Allow sections to take equal space */
+margin-bottom: 20px;
+}
+
+/* Stack "Industries" and "Our Partners" sections */
+footer .col-md-2 {
+  margin-left:40px;
+  margin-bottom: 20px;
+}
+footer .text-dark{
+  margin-top:20px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+/* Hide "Contact Us," logo, and copyright for mobile */
+footer .col-md-3, /* Contact Us */
+footer .col-md-1, /* Logo */
+footer .fs-6 {    /* Copyright */
+  display: none;
+}
+}

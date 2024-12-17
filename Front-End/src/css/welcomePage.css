@@ -1,0 +1,19 @@
+
+
+
+@media (max-width: 767px) {
+    .card {
+      background-color: transparent !important; /* Makes the background transparent on small screens */
+      color: white;
+      
+     
+     
+}
+
+.background-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Make the background overlay transparent */
+}
+ 
+
+
+}

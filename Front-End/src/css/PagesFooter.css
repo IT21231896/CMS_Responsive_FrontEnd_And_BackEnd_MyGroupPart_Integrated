@@ -1,0 +1,141 @@
+/* footer.css */
+
+/* Apply styling to the entire footer */
+.footer-container {
+    background-color: #d7d7d7;
+    padding: 1rem;
+    margin-top: auto;
+    z-index: 3; /* Ensure footer is above sidebar */
+    margin-left: 230px; /* Move the footer to the right to account for sidebar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for the container */
+    border: 2px solid #d7d7d7; /* Add a border to create a square */
+    border-radius: 0; /* Make corners sharp */
+    display: fix;
+  }
+  
+  /* For heading tags inside footer */
+  footer h5 {
+    font-size: 1rem; /* Reduced font size for headings */
+    margin-bottom: 1rem;
+  }
+  
+  /* For list items inside footer */
+  footer ul li {
+    font-size: 0.75rem; /* Reduced font size for list items */
+  }
+  
+  /* For social media icons */
+  .footer-social-icon {
+    font-size: 1.2rem; /* Reduced font size for social icons */
+  }
+  
+  /* For paragraphs in the contact section */
+  .contact-item {
+    margin-bottom: 5px; /* Reduces the space between paragraphs */
+  }
+  .contact-item:last-child {
+    margin-bottom: 1.5rem; /* Removes bottom margin for the last item */
+  }  
+  
+  .footer-contact-text {
+    font-size: 0.75rem;  /* Adjust this value to your desired font size */
+  }
+  
+  .footer-contact-text i {
+    font-size: 1rem;  /* You can also reduce the icon size if needed */
+  }
+  
+  .contact-item {
+    margin-bottom: 2px; /* Reduce the vertical space between items if needed */
+  }
+  
+  /* Bottom part of the footer */
+  .footer-bottom {
+    background-color: #7a7a7a;
+    color: #ffffff;
+    padding: 1px 0;
+    margin: 0;
+    width: 100%; /* Adjust width to span the entire content area */
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Start from the left edge */
+  }
+  /* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Adjust footer layout for tablets */
+  .footer-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    margin-left: 0; /* Remove sidebar margin */
+    padding: 1rem;
+  }
+
+  /* Adjust container layout */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Ensure it spans full width */
+  }
+
+  /* "Industries" and "Our Partners" sections */
+  .col-md-2 {
+    flex: 1; /* Allow equal space */
+    margin-bottom: 20px; /* Add space between sections */
+  }
+
+  /* Align text and icons */
+  footer .text-dark {
+    margin-top: 20px;
+  }
+  
+  footer .social-icons {
+    margin-top: 20px;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  /* Hide unnecessary sections for tablets */
+  footer .col-md-3, /* Contact Us */
+  footer .col-md-1, /* Logo */
+  footer .fs-6 {    /* Copyright */
+    display: none;
+  }
+}
+
+/* Media query for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Stack footer content vertically */
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  /* Footer sections adjustment */
+  .container {
+    flex-direction: column;
+    justify-content: flex-start; /* Align to top */
+  }
+
+  .col-md-2 {
+    margin-left: 0; /* Remove unnecessary margin */
+    margin-bottom: 15px; /* Reduce space for smaller screens */
+  }
+
+  footer .text-dark {
+    margin-top: 15px;
+  }
+
+  footer .social-icons {
+    margin-top: 15px;
+    font-size: 0.8rem; /* Further adjust font size for small screens */
+  }
+
+  /* Hide sections for mobile */
+  footer .col-md-3, /* Contact Us */
+  footer .col-md-1, /* Logo */
+  footer .fs-6 {    /* Copyright */
+    display: none;
+  }
+}

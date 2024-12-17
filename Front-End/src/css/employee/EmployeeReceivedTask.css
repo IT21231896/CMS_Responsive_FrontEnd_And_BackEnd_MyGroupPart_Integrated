@@ -1,0 +1,171 @@
+.emp-back-button-area{
+    display: flex;
+    justify-content:left;
+    align-items: start;
+  }
+
+  .emp-back-button-area .but-inside{
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .back-btn {
+    width: auto;
+    background-color: #158d93;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+  .tasks-table-container {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+  }
+
+
+  .tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .tasks-table th, .tasks-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  /* Main container styling */
+.manage-tasks-container {
+    padding: 20px;
+    /*background-color: #f8f9fa;*/
+    border-radius: 8px;
+    margin: 20px;
+    margin-left: 16%;
+  }
+
+
+  .tasks-container {
+    margin: 20px;
+  }
+  
+  
+  .breadcrumb {
+    margin-top: 20px; 
+  }
+  
+  /* Header styling */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  
+  .headManage h1{
+    color: #24757E;
+  }
+  
+  .tasks-header h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  /* Table styling */
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5 solid black; /* Ensures the table has an outer black border */
+  }
+
+
+  .tasks-table th,
+.tasks-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid black; /* Black border for table cells */
+}
+
+.tasks-table th {
+    width: 10px;
+    background-color: #d2d2d2;
+    color: rgb(9, 0, 0);
+  }
+  
+  .tasks-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+  
+  /* Responsive Design */
+@media (max-width: 1024px) {
+    .manage-tasks-container {
+        margin: 0%; /* Remove left margin for smaller screens */
+        padding: 0%;
+    }
+  }
+
+  @media (max-width: 768px) {
+  
+    .headManage h1{
+      padding-top: 40px;
+      font-size: calc(1.375rem + 1.5vw);
+      padding-bottom: 20px;
+      font-weight: bold !important; /*!important -is used for override without affect any css*/
+     }
+   
+     .tasks-container {
+      padding-top: 80px;
+      margin: 20px;
+     }
+  
+    .tasks-header {
+        /*flex-direction: column;*/
+        align-items: flex-start;
+        gap: 20px;
+    }
+  
+    .tasks-header h1 {
+        font-size: 1.25rem;
+    }
+  
+    .tasks-table th,
+    .tasks-table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+  
+    .tasks-table {
+        font-size: 0.9rem;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        display: block; /* Make the table scrollable */
+    }
+
+  
+  
+    .breadcrumb1 {
+      display: none;
+    }
+  
+
+    
+    .nav-item:last-child {
+      display: none; /* Hides the element */
+    }
+    
+    .nav-item:not(:last-child) {
+      margin-left: 30px !important; /* Add spacing between list items */
+    }
+  
+  }
+  
+  
+  

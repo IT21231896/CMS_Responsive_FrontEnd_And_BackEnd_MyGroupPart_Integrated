@@ -1,0 +1,159 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 230px;
+    height:120vh;
+    background-color: hsla(168, 7%, 73%, 0.459);
+    padding: 18px 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top:0; /* Position below the navbar */
+    left:0; /* Hide sidebar by default */
+    font-family: 'Arial', sans-serif; /* Updated font family */
+    transition: left 0.3s;
+    z-index: 1; /* Ensure sidebar is below navbar */
+    text-align: left; /* Align text to the left */
+}
+
+/* Sidebar Links */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    font-size: 16px; /* Adjusted font size */
+    font-weight: normal; /* Adjusted font weight */
+    color: #1c5d5f;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Increased gap between icon and text */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    text-align: left; /* Align text to the left */
+    justify-content: left; /* Align items to the start */
+}
+
+.sidebar ul li a:hover {
+    background-color: #1c5d5f;
+    color: #fff;
+}
+
+.sidebar ul li a img {
+    font-size: 20px;
+    color: #4c7476;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover img {
+    filter: brightness(0) invert(1); /* Example: Invert colors */
+}
+
+.sidebar ul li a span {
+    margin-left: 8px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s; /* Smooth transition when toggling sidebar */
+}
+
+.sidebar-toggle {
+    display: block; /* Ensure the button is visible */
+    font-size: 14px; /* Smaller font size */
+    color: white;
+    background-color:#24757e;
+    border: none;
+    padding: 10px; /* Adjust padding */
+    cursor: pointer;
+    position: fixed; /* Ensure the button is positioned fixed */
+    left: 10px; /* Align the button to the left */
+    top: 70px; /* Adjust the top position to be below the navbar */
+    z-index: 2; /* Ensure toggle button is above sidebar */
+}
+.sidebar h2 {
+    font-size: 28px;
+    color: #1c5d5f;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-weight: bold;
+  
+}
+
+/* Media Queries for Responsive Layout */
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    /* Sidebar Styles on Mobile */
+    .sidebar {
+        width: 230px;
+        left: -250px; /* Hide the sidebar off-screen by default */
+        position: fixed;
+        top: 90px; /* Position below the navbar */
+        z-index: 1;
+    }
+
+    .show-sidebar .sidebar {
+        left: 0; /* Show sidebar when toggled */
+    }
+
+    /* Show sidebar toggle button on mobile */
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 100px; /* Adjust the top position to be below the navbar */
+        left: 0px;
+        z-index: 2;
+    }
+
+    /* Main content takes up full width on mobile */
+    .main-content {
+        margin-left: 0; /* No space for sidebar */
+    }
+
+    /* Adjust header for mobile */
+    h1 {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    /* Adjust layout for sidebar links */
+    .sidebar ul li a {
+        font-size: 14px; /* Adjusted font size */
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .sidebar {
+        left: 0; /* Always show sidebar on desktop */
+        position: fixed;
+        top: 59px; /* Position below the navbar */
+    }
+
+    .sidebar-toggle {
+        display: none; /* Hide toggle button on desktop */
+    }
+
+    .main-content {
+        margin-left: 250px; /* Add space for sidebar */
+    }
+
+    /* Adjust layout for sidebar links */
+    .sidebar ul li a {
+        font-size: 16px; /* Adjusted font size */
+    }
+}
