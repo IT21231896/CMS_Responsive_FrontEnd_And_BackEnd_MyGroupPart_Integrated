@@ -1,6 +1,8 @@
+/*no use*/
 
 
 /* Main content styles */
+/*
 .main-content-wrap-employee-task {
   flex-grow: 1;
   display: flex;
@@ -9,7 +11,7 @@
   justify-content: center;
   margin-top: 70px;
   margin-left: 235px;
-  margin-bottom: 50px; /*  margin-bottom: 250px;  */
+  margin-bottom: 50px;
 }
 
 .main-content {
@@ -28,10 +30,9 @@
   margin-left: 14px;
 }
 
-/*side bar in mobile view issues*/
 @media (max-width: 768px) {
   .show-sidebar {
-    display: block; /* Show the sidebar when it has the 'show-sidebar' class */
+    display: block; 
   }
 }
 
@@ -104,7 +105,6 @@
 }
 
 
-/* Card styles */
 .card {
   border-radius: 15px;
   border: none;
@@ -113,7 +113,6 @@
 }
 
 
-/* Form styles */
 .form-label {
   font-weight: bold;
 }
@@ -213,7 +212,6 @@
   background-position: center;
 }
 
-/*Buttons*/
 .back-button {
   background-color: #24757E;
   color: white;
@@ -257,7 +255,6 @@
 }
 
 
-/*Other*/
 h2 {
   font-family: Poppins;
   font-size: 36px;
@@ -277,3 +274,4 @@ h2 {
   align-items: center;
   text-align: center;
 }
+  */

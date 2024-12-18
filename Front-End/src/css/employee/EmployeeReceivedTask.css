@@ -1,15 +1,15 @@
-.emp-back-button-area{
+.apwgr-emp-back-button-area{
     display: flex;
     justify-content:left;
     align-items: start;
   }
 
-  .emp-back-button-area .but-inside{
+  .apwgr-emp-back-button-area .apwgr-but-inside{
     width: 100%;
     max-width: 800px;
   }
 
-  .back-btn {
+  .apwgr-back-btn {
     width: auto;
     background-color: #158d93;
     color: white;
@@ -20,26 +20,26 @@
   }
 
 
-  .tasks-table-container {
+  .apwgr-tasks-table-container {
     max-height: 400px; /* Adjust height as needed */
     overflow-y: auto;
     border: 1px solid #ddd;
   }
 
 
-  .tasks-table {
+  .apwgr-tasks-table {
     width: 100%;
     border-collapse: collapse;
   }
 
-  .tasks-table th, .tasks-table td {
+  .apwgr-tasks-table th, .apwgr-tasks-table td {
     padding: 8px 12px;
     text-align: left;
     border: 1px solid #ddd;
   }
 
   /* Main container styling */
-.manage-tasks-container {
+.apwgr-recived-tasks-container {
     padding: 20px;
     /*background-color: #f8f9fa;*/
     border-radius: 8px;
@@ -48,7 +48,7 @@
   }
 
 
-  .tasks-container {
+  .apwgr-tasks-container {
     margin: 20px;
   }
   
@@ -58,24 +58,24 @@
   }
   
   /* Header styling */
-.tasks-header {
+.apwgr-tasks-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
   }
   
-  .headManage h1{
+  .apwgr-headManage h1{
     color: #24757E;
   }
   
-  .tasks-header h1 {
+  .apwgr-tasks-header h1 {
     font-size: 1.5rem;
     color: #333;
   }
 
   /* Table styling */
-.tasks-table {
+.apwgr-tasks-table {
     width: 100%;
     border-collapse: collapse;
     background: white;
@@ -86,20 +86,20 @@
   }
 
 
-  .tasks-table th,
-.tasks-table td {
+  .apwgr-tasks-table th,
+.apwgr-tasks-table td {
   padding: 12px 15px;
   text-align: left;
   border: 1px solid black; /* Black border for table cells */
 }
 
-.tasks-table th {
+.apwgr-tasks-table th {
     width: 10px;
     background-color: #d2d2d2;
     color: rgb(9, 0, 0);
   }
   
-  .tasks-table tr:hover {
+  .apwgr-tasks-table tr:hover {
     background-color: #f1f1f1;
   }
   
@@ -107,7 +107,7 @@
   
   /* Responsive Design */
 @media (max-width: 1024px) {
-    .manage-tasks-container {
+    .apwgr-manage-tasks-container {
         margin: 0%; /* Remove left margin for smaller screens */
         padding: 0%;
     }
@@ -115,35 +115,35 @@
 
   @media (max-width: 768px) {
   
-    .headManage h1{
+    .apwgr-headManage h1{
       padding-top: 40px;
       font-size: calc(1.375rem + 1.5vw);
       padding-bottom: 20px;
       font-weight: bold !important; /*!important -is used for override without affect any css*/
      }
    
-     .tasks-container {
+     .apwgr-tasks-container {
       padding-top: 80px;
       margin: 20px;
      }
   
-    .tasks-header {
+    .apwgr-tasks-header {
         /*flex-direction: column;*/
         align-items: flex-start;
         gap: 20px;
     }
   
-    .tasks-header h1 {
+    .apwgr-tasks-header h1 {
         font-size: 1.25rem;
     }
   
-    .tasks-table th,
-    .tasks-table td {
+    .apwgr-tasks-table th,
+    .apwgr-tasks-table td {
         font-size: 0.85rem;
         padding: 8px;
     }
   
-    .tasks-table {
+    .apwgr-tasks-table {
         font-size: 0.9rem;
         overflow-x: auto; /* Enable horizontal scrolling */
         display: block; /* Make the table scrollable */

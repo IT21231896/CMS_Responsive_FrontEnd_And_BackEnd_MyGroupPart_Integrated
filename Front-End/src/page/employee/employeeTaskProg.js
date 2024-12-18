@@ -1,3 +1,4 @@
+/*
 import React, { useState } from 'react';
 import Navbar from '../../components/templetes/Navbar';
 import Footer from '../../components/templetes/Footer';
@@ -172,3 +173,4 @@ function EmployeeTaskProg() {
 }
 
 export default EmployeeTaskProg;
+*/

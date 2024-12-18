@@ -43,7 +43,7 @@ const EmployeeReceivedTask = () => {
     return (
         <div>
             <Navbar />
-            <div className="manage-tasks-container">
+            <div className="apwgr-recived-tasks-container">
                 <nav className="breadcrumb" aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a className="text-decoration-none" href="/employee-dashboard">Home</a></li>
@@ -51,21 +51,21 @@ const EmployeeReceivedTask = () => {
                     </ol>
                 </nav>
 
-                <div className="tasks-container">
-                    <div className='headManage'>
+                <div className="apwgr-tasks-container">
+                    <div className='apwgr-headManage'>
                         <h1 className="text-center">Received Tasks</h1>
                     </div>
 
-                    <div className="emp-back-button-area">
-                        <div className="but-inside">
+                    <div className="apwgr-emp-back-button-area">
+                        <div className="apwgr-but-inside">
                             <button className="btn back-btn my-3" onClick={() => navigate('/employee-manage-task-prgress')}>
                                 <span className="bi bi-arrow-left m-3"> Back </span>
                             </button>
                         </div>
                     </div>
 
-                    <div className="tasks-table-container">
-                        <table className="tasks-table">
+                    <div className="apwgr-tasks-table-container">
+                        <table className="apwgr-tasks-table">
                             <thead>
                                 <tr>
                                     <th>Task ID</th>
@@ -91,7 +91,7 @@ const EmployeeReceivedTask = () => {
                 </div>
             </div>
 
-            <button className="sidebar-toggle" onClick={toggleSidebar}>☰</button>
+            <button className="apwgr-sidebar-toggle" onClick={toggleSidebar}>☰</button>
             <div className={`flex-grow-1 d-flex ${sidebarVisible ? 'show-sidebar' : ''}`}>
                 <Sidebar sidebarVisible={sidebarVisible} />
             </div>
