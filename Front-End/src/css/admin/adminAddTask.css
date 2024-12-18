@@ -1,12 +1,12 @@
 /* Container styling */
-.main-tasks-container {
+.apwgr-main-tasks-container {
   padding: 20px;
   border-radius: 8px;
   margin: 20px;
   margin-left: 16%;
 }
 
-.add-task-container {
+.apwgr-add-task-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
   }
 
 
-  .head h1{
+  .apwgr-head h1{
     color: #24757E;
   }
   
@@ -23,7 +23,7 @@
  }
 
 /* Back button styling */
-.back-btn {
+.apwgr-back-btn {
   width: auto;
   background-color: #158d93;
   color: white;
@@ -32,7 +32,7 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.back-btn:hover {
+.apwgr-back-btn:hover {
   background-color: #11777e; 
   color: #f0f0f0; 
   transform: scale(1.05); 
@@ -40,18 +40,18 @@
 }
 
 
-.back-button-area{
+.apwgr-back-button-area{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.back-button-area .but-inside{
+.apwgr-back-button-area .apwgr-but-inside{
   width: 100%;
   max-width: 800px;
 }
 
-  .content {
+  .apwgr-content {
     width: 100%;
     max-width: 800px;
     background-color: #e3e3e3;
@@ -61,7 +61,7 @@
   }
   
   /* Title styling */
-  .page-title {
+  .apwgr-page-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -69,19 +69,19 @@
   }
   
   /* Form styling */
-  .task-form {
+  .apwgr-task-form {
     display: flex;
     flex-direction: column;
   }
   
-  .task-form label {
+  .apwgr-task-form label {
     font-size: 14px;
     margin-bottom: 10px;
     color: #333;
   }
   
-  .task-form input,
-  .task-form textarea {
+  .apwgr-task-form input,
+  .apwgr-task-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -92,7 +92,7 @@
     background-color: #cfcfcf;
   }
   
-  .task-form textarea {
+  .apwgr-task-form textarea {
     height: 100px;
     resize: none;
   }
@@ -105,7 +105,7 @@ textarea::placeholder {
   font-style: italic;
 }
   
-  .back-button-area .send-btn {
+  .apwgr-back-button-area .apwgr-send-btn {
     width: 20%;
     padding: 10px;
     margin-bottom: 20px;
@@ -117,14 +117,14 @@ textarea::placeholder {
     cursor: pointer;
   }
   
-  .send-btn:hover {
+  .apwgr-send-btn:hover {
     background-color: #005959;
   }
   
   /* Responsive design */
   @media (max-width: 768px) {
 
-    .main-tasks-container {
+    .apwgr-main-tasks-container {
       padding-top: 80px;
       padding-left:0%;
       padding-right:0%;
@@ -133,37 +133,37 @@ textarea::placeholder {
       margin: 20px;
     }
 
-    .head h1{
+    .apwgr-head h1{
       padding-top: 40px;
       font-size: calc(1.375rem + 1.5vw);
       font-weight: bold !important;
      }
 
-    .add-task-container {
+    .apwgr-add-task-container {
       padding: 0%;
     }
 
-    .content {
+    .apwgr-content {
       padding: 15px;
     }
   
-    .page-title {
+    .apwgr-page-title {
       font-size: 20px;
     }
   
-    .back-button-area .send-btn {
+    .apwgr-back-button-area .apwgr-send-btn {
       font-size: 14px;
       width: 40%;
       margin-bottom: 20px;
     }
 
-    .back-button-area{
+    .apwgr-back-button-area{
       display: flex;
       justify-content: center;
       align-items: center;
     }
     
-    .back-button-area .but-inside{
+    .apwgr-back-button-area .apwgr-but-inside{
       width: 100%;
       max-width: 800px;
       padding-left: 0%;

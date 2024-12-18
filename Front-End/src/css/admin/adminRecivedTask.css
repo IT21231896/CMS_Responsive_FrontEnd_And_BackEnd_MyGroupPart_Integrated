@@ -2,7 +2,7 @@ body, html {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
- .container1 {
+ .apwgr-container1 {
 
     padding: 20px;
     /*background-color: #f8f9fa;*/
@@ -24,7 +24,7 @@ body, html {
 
    
  }
- .container2 {
+ .apwgr-container2 {
    margin-left: 16%;
    max-width: 84%;
    /* max-height: 100vh; */
@@ -39,37 +39,37 @@ h1 {
    color: #1f7a8c;
   
  }
- .btn{
+ .apwgr-btn{
   margin-bottom: 20px;
   background-color: #1f7a8c;
  }
- .table-container {
+ .apwgr-table-container {
    max-height: 70vh; /* Set a max height for the table container */
    overflow-y: auto; /* Enable vertical scrolling */
    padding-top: 10px; /* Add space above the table */
  }
  
- .table-responsive {
+ .apwgr-table-responsive {
    width: 100%; /* Make sure the table takes full width */
  }
 
  
  
- .table-container .small-width {
+ .apwgr-table-container .apwgr-small-width {
   width: 5%; /* Adjust as needed for small columns */
 }
 
-.table-container .large-width {
+.apwgr-table-container .apwgr-large-width {
   width: 50%; /* Adjust as needed for larger columns */
 }
 
-.table-container th,
-.table-container td {
+.apwgr-table-container th,
+.apwgr-table-container td {
   white-space: nowrap; /* Prevent text wrapping (optional) */
   text-align: center;  /* Align text to the center (optional) */
 }
 
-.custom-footer-wrapper {
+.apwgr-custom-footer-wrapper {
   position: relative;
   margin-left:0%;
   margin-right: 0%;
@@ -77,7 +77,7 @@ h1 {
   bottom: 0%;
 }
 
-.custom-footer-wrapper Footer {
+.apwgr-custom-footer-wrapper Footer {
   position: absolute;
  
 }
@@ -93,7 +93,7 @@ h1 {
     margin-left: 0;
     
 }
-   .container1 {
+   .apwgr-container1 {
       top: 0;
       margin-top: calc(var(--navbar-height, 50px));
       margin-left: calc(var(--Sidebar-width, 23%));
@@ -114,7 +114,7 @@ h1 {
     
    }
  
-   .container2 {
+   .apwgr-container2 {
       margin-left: 23%;
       max-width: 77%;
       /* max-height: 100vh; */
@@ -124,14 +124,14 @@ h1 {
    
    }
 
-   .custom-footer-wrapper {
+   .apwgr-custom-footer-wrapper {
     position: relative;
     margin-left:8%;
     margin-right: 0%;
     width: 92%;
   }
   
-  .custom-footer-wrapper Footer {
+  .apwgr-custom-footer-wrapper Footer {
     position: absolute;
    
   }
@@ -140,11 +140,11 @@ h1 {
 
    /* Mobile-Specific Styles */
 @media (max-width: 768px) {
-   .container1 {
+   .apwgr-container1 {
       display: none; /* Hide the entire container1 */
     }
   
-    .breadcrumb {
+    .apwgr-breadcrumb {
       display: none; /* Hide the breadcrumb navigation */
     }
     h1 {
@@ -154,7 +154,7 @@ h1 {
       font-weight: bold !important;
       
   }
-   .container2 {
+   .apwgr-container2 {
     font-size: smaller;
       margin-top: var(--container1-height, 120px);
      margin-left: 5%; /* Align to full-width */
@@ -162,7 +162,7 @@ h1 {
      padding-left: 10px; /* Adjust padding */
      margin-right: 5%;
    }
-   .custom-footer-wrapper {
+   .apwgr-custom-footer-wrapper {
     position: relative;
     margin-left: -18%;
     margin-right: 0%;
@@ -170,7 +170,7 @@ h1 {
   
   }
   
-  .custom-footer-wrapper Footer {
+  .apwgr-custom-footer-wrapper Footer {
     position: absolute;
    
   }

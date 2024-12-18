@@ -58,7 +58,7 @@ const AdminAddTask = () => {
         <div>
             <Navbar />
 
-            <div className="main-tasks-container">
+            <div className="apwgr-main-tasks-container">
                 <nav className="breadcrumb" aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a className="text-decoration-none" href="/admin-Dashboard">Home</a></li>
@@ -67,21 +67,21 @@ const AdminAddTask = () => {
                     </ol>
                 </nav>
 
-                <div className="head">
+                <div className="apwgr-head">
                     <h1 className="text-center">Add Tasks</h1>
                 </div>
 
-                <div className="back-button-area">
-                    <div className="but-inside">
-                        <button className="btn back-btn my-3" onClick={() => navigate('/admin-manage-task')}>
+                <div className="apwgr-back-button-area">
+                    <div className="apwgr-but-inside">
+                        <button className="btn apwgr-back-btn my-3" onClick={() => navigate('/admin-manage-task')}>
                             <span className="bi bi-arrow-left m-3"> Back </span>
                         </button>
                     </div>
                 </div>
 
-                <div className="add-task-container">
-                    <div className="content">
-                        <form className="task-form" onSubmit={handleSubmit}>
+                <div className="apwgr-add-task-container">
+                    <div className="apwgr-content">
+                        <form className="apwgr-task-form" onSubmit={handleSubmit}>
                             <label>
                                 <input type="text" name="EmployeeID" placeholder="Employee ID" value={taskData.EmployeeID} onChange={handleInputChange} required />
                             </label>
@@ -106,15 +106,15 @@ const AdminAddTask = () => {
                             <label>
                                 <textarea name="Description" placeholder="Task Description" value={taskData.Description} onChange={handleInputChange}></textarea>
                             </label>
-                            <div className="back-button-area">
-                                <button type="submit" className="send-btn">Send</button>
+                            <div className="apwgr-back-button-area">
+                                <button type="submit" className="apwgr-send-btn">Send</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <button className="sidebar-toggle" onClick={toggleSidebar}>☰</button>
+            <button className="apwgr-sidebar-toggle" onClick={toggleSidebar}>☰</button>
             <div className={`flex-grow-1 d-flex ${sidebarVisible ? 'show-sidebar' : ''}`}>
                 <Sidebar sidebarVisible={sidebarVisible} />
             </div>

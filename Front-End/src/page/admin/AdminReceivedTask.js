@@ -37,7 +37,7 @@ export default function AdminReceivedTask() {
   return (
     <div>
       <Navbar />
-      <div className="container1">
+      <div className="apwgr-container1">
         <nav className="breadcrumb" aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
@@ -52,7 +52,7 @@ export default function AdminReceivedTask() {
           </ol>
         </nav>
       </div>
-      <div className="container2">
+      <div className="apwgr-container2">
         <div>
           <h1 className="text-center">Received Task Progress</h1>
         </div>
@@ -62,14 +62,14 @@ export default function AdminReceivedTask() {
             <span className="ms-2">Back</span>
           </button>
         </div>
-        <div className="table-container">
+        <div className="apwgr-table-container">
           {loading ? (
             <div>Loading tasks...</div>
           ) : (
-            <div className="table-responsive">
+            <div className="apwgr-table-responsive">
               <table className="table table-bordered">
                 <thead>
-                  <tr className="table-light">
+                  <tr className="apwgr-table-light">
                     <th>Task ID</th>
                     <th>Employee ID</th>
                     <th>Task Name</th>
@@ -117,7 +117,7 @@ export default function AdminReceivedTask() {
           )}
         </div>
       </div>
-      <button className="sidebar-toggle" onClick={toggleSidebar}>☰</button>
+      <button className="apwgr-sidebar-toggle" onClick={toggleSidebar}>☰</button>
       <div className={`flex-grow-1 d-flex ${sidebarVisible ? 'show-sidebar' : ''}`}>
         <Sidebar sidebarVisible={sidebarVisible} />
       </div>

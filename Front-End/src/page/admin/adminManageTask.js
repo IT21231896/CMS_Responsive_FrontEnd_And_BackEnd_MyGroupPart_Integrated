@@ -50,7 +50,7 @@ const AdminManageTask = () => {
     return (
         <div>
             <Navbar />
-            <div className="manage-tasks-container">
+            <div className="apwgr-manage-tasks-container">
                 <nav className="breadcrumb" aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a className="text-decoration-none" href="/admin-Dashboard">Home</a></li>
@@ -58,18 +58,18 @@ const AdminManageTask = () => {
                     </ol>
                 </nav>
 
-                <div className="tasks-container">
-                    <div className='headManage'>
+                <div className="apwgr-tasks-container">
+                    <div className='apwgr-headManage'>
                         <h1 className="text-center">Tasks</h1>
                     </div>
 
-                    <header className="tasks-header">
-                        <button className="add-task-btn" onClick={() => navigate('/admin-add-task')}>Add Task</button>
-                        <button className="progress-btn" onClick={() => navigate('/admin-recived-task')}>Received Progress</button>
+                    <header className="apwgr-tasks-header">
+                        <button className="apwgr-add-task-btn" onClick={() => navigate('/admin-add-task')}>Add Task</button>
+                        <button className="apwgr-progress-btn" onClick={() => navigate('/admin-recived-task')}>Received Progress</button>
                     </header>
 
-                    <div className="tasks-table-container">
-                        <table className="tasks-table">
+                    <div className="apwgr-tasks-table-container">
+                        <table className="apwgr-tasks-table">
                             <thead>
                                 <tr>
                                     <th>Task ID</th>
@@ -91,7 +91,7 @@ const AdminManageTask = () => {
                                         <td>{task.Description}</td>
                                         <td>{new Date(task.Deadline).toISOString().split('T')[0]}</td>
                                         <td>
-                                            <button className="delete-btn" onClick={() => deleteTask(task.TaskID)}>Delete</button>
+                                            <button className="apwgr-delete-btn" onClick={() => deleteTask(task.TaskID)}>Delete</button>
                                         </td>
                                     </tr>
                                 ))}
@@ -101,7 +101,7 @@ const AdminManageTask = () => {
                 </div>
             </div>
 
-            <button className="sidebar-toggle" onClick={toggleSidebar}>☰</button>
+            <button className="apwgr-sidebar-toggle" onClick={toggleSidebar}>☰</button>
             <div className={`flex-grow-1 d-flex ${sidebarVisible ? 'show-sidebar' : ''}`}>
                 <Sidebar sidebarVisible={sidebarVisible} />
             </div>
