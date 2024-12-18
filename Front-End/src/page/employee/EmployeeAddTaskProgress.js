@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import '../../css/employee/EmployeeAddTaskProgress.css';
+import '../../css/employee/(apwgr)EmployeeAddTaskProgress.css';
 
 import Navbar from '../../components/templetes/Navbar';
 import Footer from '../../components/templetes/Footer';
@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const EmployeeAddTaskProgress = () => {
-    
+
     const navigate = useNavigate();
 
     const [sidebarVisible, setSidebarVisible] = useState(false);

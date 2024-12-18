@@ -4,7 +4,7 @@ import fs from 'fs';
 import multer from 'multer';
 
 
-export const getAllTasks = (req, res) => {
+export const getAllTaskProgress = (req, res) => {
   const query = `SELECT * FROM TaskProgress`; // Adjust table name
   db.query(query, (err, results) => {
     if (err) {

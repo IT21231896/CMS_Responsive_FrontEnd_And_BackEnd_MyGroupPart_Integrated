@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import "../../css/admin/adminAddTask.css";
+import "../../css/admin/(apwgr)adminAddTask.css";
 
 import Navbar from '../../components/templetes/Navbar';
 import Footer from '../../components/templetes/Footer';

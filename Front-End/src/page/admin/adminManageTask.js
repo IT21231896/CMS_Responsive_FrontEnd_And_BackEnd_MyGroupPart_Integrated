@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import "../../css/admin/adminManageTask.css";
+import "../../css/admin/(apwgr)adminManageTask.css";
 
 import Navbar from '../../components/templetes/Navbar';
 import Footer from '../../components/templetes/Footer';

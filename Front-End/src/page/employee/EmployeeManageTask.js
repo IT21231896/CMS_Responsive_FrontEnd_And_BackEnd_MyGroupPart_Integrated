@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import "../../css/employee/EmployeeManageTask.css";
+import "../../css/employee/(apwgr)EmployeeManageTask.css";
 
 import Navbar from '../../components/templetes/Navbar';
 import Footer from '../../components/templetes/Footer';
@@ -24,7 +24,7 @@ const EmployeeManageTask = () => {
     // Fetch tasks from the API
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:8800/api/adminRecivedTasks'); //chenge this to proper employee routes
+            const response = await axios.get('http://localhost:8800/api/employee-sended-tasks-progress'); //chenge this to proper employee routes
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching tasks:', error);
