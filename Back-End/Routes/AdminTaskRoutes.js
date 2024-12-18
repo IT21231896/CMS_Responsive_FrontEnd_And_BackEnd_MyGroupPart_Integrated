@@ -59,7 +59,7 @@ router.delete('/tasks/:id', (req, res) => {
     });
 });
 
-
+/*
 // Fetch All Tasks Progress Route - Jeno
 router.get('/adminRecivedTasks', (req, res) => {
     const query = `SELECT * FROM TaskProgress`; // Adjust table name
@@ -72,7 +72,7 @@ router.get('/adminRecivedTasks', (req, res) => {
     });
 });
 
-
+*/
 
 
 export default router;

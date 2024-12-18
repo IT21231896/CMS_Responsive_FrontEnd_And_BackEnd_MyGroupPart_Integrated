@@ -1,7 +1,7 @@
 import express from 'express';
 import AdminTaskRoutes from './Routes/AdminTaskRoutes.js'; // Import AdminRoutes.
 import EmployeeTaskProgressRoutes from './Routes/EmployeeTaskProgressRoutes.js';
-
+import TaskProgrssRoutes from './Routes/taskProgressRoutes.js'
 import cors from 'cors';
 
 const app = express();  // Initialize the express app first
@@ -17,8 +17,10 @@ app.use(express.json());
 // Use the AdminRoutes for task management
 app.use('/admin/task', AdminTaskRoutes);
 
-app.use('/uploads', express.static('uploads')); 
+app.use('/uploads', express.static('uploads'));
 app.use('/employee/task', EmployeeTaskProgressRoutes);
+app.use('/api',TaskProgrssRoutes);
+
 
 // Start the server
 app.listen(port, () => {

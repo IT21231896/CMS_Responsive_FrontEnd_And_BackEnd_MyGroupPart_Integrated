@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import '../../css/employee/EmployeeAddTaskProgress.css';
 
@@ -12,68 +13,57 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const EmployeeAddTaskProgress = () => {
-    const [sidebarVisible, setSidebarVisible] = useState(false);
-    const [taskData, setTaskData] = useState({
-        EmployeeID: '5', /* this is the already registed in the DB in employee table(employeeID7 alredy their in the db = ), default employee id, after integrate we need to send that perticuler ligged in exmployee ID - EmployeeID: '', */
-        TaskName: '',
-        TaskID: '',
-        TaskDescription: '',
-        Attachment: null,
-    });
-
+    
     const navigate = useNavigate();
 
-    const toggleSidebar = () => {
-        setSidebarVisible(!sidebarVisible);
-    };
-
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setTaskData({ ...taskData, [name]: value });
-    };
-
-    const handleFileChange = (e) => {
-        setTaskData({ ...taskData, Attachment: e.target.files[0] });
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append('TaskName', taskData.TaskName);
-        formData.append('TaskID', taskData.TaskID);
-        formData.append('TaskDescription', taskData.TaskDescription);
-        if (taskData.Attachment) {
-            formData.append('Attachment', taskData.Attachment);
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+    const [TaskName, setTaskTitle] = useState('');
+    const [TaskID, setTaskID] = useState('');
+    const [TaskDescription, setTaskDescription] = useState('');
+    const [file, setFile] = useState(null);
+  
+    const EmployeeID = 5; // manual EmployeeID creation, PLZ change this when the login/authentication process has been implemented
+  
+    const handleFormSubmit = async (e) => { // Handle form submission (send task progress data to the server)
+      e.preventDefault();
+  
+      const formData = new FormData(); // Create a new FormData object to send data, including file if any
+      formData.append('TaskID', TaskID);
+      formData.append('EmployeeID', EmployeeID);
+      formData.append('TaskName', TaskName);
+      formData.append('Description', TaskDescription);
+  
+      if (file) { // If a file is selected, append it to the FormData
+        formData.append('Attachment', file);
+      }
+  
+      try { // Send the form data to the server using axios POST request
+        const response = await axios.post('http://localhost:8800/api/task-progress', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+  
+        if (response.status === 200) { // If the request is successful, clear the form and show a success message
+          alert('Task Progress Updated Successfully!');
+          setTaskTitle('');
+          setTaskID('');
+          setTaskDescription('');
+          setFile(null);
+        } else {
+          alert('Failed to Update the Task Progress.');
         }
-        formData.append('EmployeeID', taskData.EmployeeID);
-
-        try {
-            const response = await fetch('http://localhost:8800/employee/task/task-progress', {
-                method: 'POST',
-                body: formData,
-            });
-
-            const result = await response.json();
-            if (response.ok) {
-                alert('Task Progress Updated Successfully!');
-                setTaskData({
-                    TaskName: '',
-                    TaskID: '',
-                    TaskDescription: '',
-                    Attachment: null,
-                    EmployeeID: '', 
-                });
-            } else {
-                alert(result.message || 'Failed to Update the Task Progress.');
-            }
-
-            navigate('/employee-manage-task-prgress');
-
-        } catch (error) {
-            console.error('Error Updating the Task:', error);
-            alert('An Error Occurred while Updating the Task Progress.');
-        }
+      } catch (error) { // Handle any errors that occur during the request
+        console.error('Error Updating the Task:', error);
+        alert('An Error Occurred while Updating the Task Progress.');
+      }
     };
+  
+    const toggleSidebar = () => { // Toggle the visibility of the sidebar
+      setSidebarVisible(!sidebarVisible);
+    };
+
+  
 
     return (
         <div>
@@ -101,21 +91,19 @@ const EmployeeAddTaskProgress = () => {
 
                 <div className="apwgr-add-task-container">
                     <div className="apwgr-content">
-                        <form className="apwgr-task-form" onSubmit={handleSubmit}>
-                            {/*<label>
-                                <input type="text" name="EmployeeID" placeholder="Employee ID" value={taskData.EmployeeID} onChange={handleInputChange} required />
-                            </label>*/}
+                        <form className="apwgr-task-form" onSubmit={handleFormSubmit}>
+
                             <label>
-                                <input type="text" name="TaskName" placeholder="Task Name" value={taskData.TaskName} onChange={handleInputChange} required />
+                                <input type="text" name="TaskName" id="TaskName" placeholder="Task Name" value={TaskName} onChange={(e) => setTaskTitle(e.target.value)} required />
                             </label>
                             <label>
-                                <input type="text" name="TaskID" placeholder="Task ID" value={taskData.TaskID} onChange={handleInputChange} required />
+                                <input type="text" name="TaskID" id="TaskID" placeholder="Task ID" value={TaskID} onChange={(e) => setTaskID(e.target.value)} required />
                             </label>
                             <label>
-                                <textarea name="TaskDescription" placeholder="Task Description" value={taskData.TaskDescription} onChange={handleInputChange} required></textarea>
+                                <textarea name="TaskDescription" id="TaskDescription" placeholder="Task Description" value={TaskDescription} onChange={(e) => setTaskDescription(e.target.value)} required></textarea>
                             </label>
                             <label>
-                                <input type="file" name="Attachment" onChange={handleFileChange} />
+                                <input type="file" id="fileUpload" name="Attachment" onChange={(e) => setFile(e.target.files[0])}  />
                             </label>
                             <div className="apwgr-back-button-area">
                                 <button type="submit" className="apwgr-send-btn">Send</button>
@@ -137,3 +125,162 @@ const EmployeeAddTaskProgress = () => {
 };
 
 export default EmployeeAddTaskProgress;
+
+/*
+import React, { useState } from 'react';
+import Navbar from '../../components/templetes/Navbar';
+import Footer from '../../components/PagesFooter';
+import Sidebar from '../../components/templetes/ESideBar';
+import axios from 'axios';
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+import '../../css/employee/ETP(apvgr).css';
+
+function EmployeeAddTaskProgress() { // State variables to manage task details and sidebar visibility
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+  const [TaskName, setTaskTitle] = useState('');
+  const [TaskID, setTaskID] = useState('');
+  const [TaskDescription, setTaskDescription] = useState('');
+  const [file, setFile] = useState(null);
+
+  const EmployeeID = 5; // manual EmployeeID creation, PLZ change this when the login/authentication process has been implemented
+
+  const handleFormSubmit = async (e) => { // Handle form submission (send task progress data to the server)
+    e.preventDefault();
+
+    const formData = new FormData(); // Create a new FormData object to send data, including file if any
+    formData.append('TaskID', TaskID);
+    formData.append('EmployeeID', EmployeeID);
+    formData.append('TaskName', TaskName);
+    formData.append('Description', TaskDescription);
+
+    if (file) { // If a file is selected, append it to the FormData
+      formData.append('Attachment', file);
+    }
+
+    try { // Send the form data to the server using axios POST request
+      const response = await axios.post('http://localhost:8800/api/task-progress', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if (response.status === 200) { // If the request is successful, clear the form and show a success message
+        alert('Task Progress Updated Successfully!');
+        setTaskTitle('');
+        setTaskID('');
+        setTaskDescription('');
+        setFile(null);
+      } else {
+        alert('Failed to Update the Task Progress.');
+      }
+    } catch (error) { // Handle any errors that occur during the request
+      console.error('Error Updating the Task:', error);
+      alert('An Error Occurred while Updating the Task Progress.');
+    }
+  };
+
+  const toggleSidebar = () => { // Toggle the visibility of the sidebar
+    setSidebarVisible(!sidebarVisible);
+  };
+
+  const handleGoBack = () => { // Go back to the previous page
+    window.history.back();
+  };
+
+  return (
+    <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
+      <Navbar />
+      <button className="btn btn-primary sidebar-toggle" onClick={toggleSidebar}>☰</button>
+
+      <div className={`flex-grow-1 d-flex ${sidebarVisible ? 'show-sidebar' : ''}`} style={{ flexGrow: 1 }}>
+        <Sidebar sidebarVisible={sidebarVisible} />
+        
+        <div className="main-content-wrap">
+          <div className="container mb-4 d-none d-md-flex breadcrumb-wrap">
+            <nav aria-label="breadcrumb">
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page">
+                  Add Tasks
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <div className="main-content flex-grow-1 align-items-center justify-content-center">
+            <div className="centered-div">
+              <h2>Send Progress</h2>
+            </div>
+            
+            <div className="container">
+              <div className="justify-content-start mb-3">
+                <button className="btn btn-secondary back-button" onClick={handleGoBack}>
+                  <img src={require('../../assets/back-button.png')} alt="Back Icon" className="back-icon" />
+                  Back
+                </button>
+              </div>
+            </div>
+
+            <div className="card shadow-sm p-4">
+              <form onSubmit={handleFormSubmit}>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    id="TaskName"
+                    className="form-control"
+                    placeholder="Task Title"
+                    value={TaskName}
+                    onChange={(e) => setTaskTitle(e.target.value)} // Update task title on change
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    id="TaskID"
+                    className="form-control"
+                    placeholder="Task ID"
+                    value={TaskID}
+                    onChange={(e) => setTaskID(e.target.value)} // Update task ID on change
+                  />
+                </div>
+                <div className="mb-0">
+                  <textarea
+                    id="TaskDescription"
+                    className="form-control"
+                    rows="8"
+                    placeholder="Task Description"
+                    value={TaskDescription}
+                    onChange={(e) => setTaskDescription(e.target.value)} // Update task description on change
+                  ></textarea>
+                </div>
+                <div className="mb-3">
+                  <input type="file"
+                    id="fileUpload"
+                    className="form-control"
+                    onChange={(e) => setFile(e.target.files[0])} // Update file state on file selection
+                  /> 
+                </div>
+                <div className="d-flex justify-content-center">
+                  <button type="submit" className="btn btn-primary send-button">
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <Footer />
+    </div>
+  );
+}
+
+export default EmployeeAddTaskProgress;
+*/

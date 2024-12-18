@@ -19,6 +19,7 @@ router.get('/tasks', (req, res) => {
     });
 });
 
+/*
 // get All Tasks Progress Route - EmployeeManageTask.js UI
 router.get('/sended-progress', (req, res) => {
     const sql = `SELECT * FROM TaskProgress`;
@@ -29,9 +30,9 @@ router.get('/sended-progress', (req, res) => {
         }
         res.status(200).json(results);
     });
-});
+});*/
 
-
+/*
 // Add Task Progress Route
 router.post('/task-progress', upload.single('Attachment'), (req, res) => {
     const { TaskName,EmployeeID, TaskID, TaskDescription } = req.body;
@@ -51,7 +52,7 @@ router.post('/task-progress', upload.single('Attachment'), (req, res) => {
         }
         res.status(200).json({ message: 'Task progress updated successfully.', progressID: result.insertId });
     });
-});
+});*/
 
 export default router;
 

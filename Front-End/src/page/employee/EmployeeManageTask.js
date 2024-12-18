@@ -24,7 +24,7 @@ const EmployeeManageTask = () => {
     // Fetch tasks from the API
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:8800/employee/task/sended-progress'); //chenge this to proper employee routes
+            const response = await axios.get('http://localhost:8800/api/adminRecivedTasks'); //chenge this to proper employee routes
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching tasks:', error);

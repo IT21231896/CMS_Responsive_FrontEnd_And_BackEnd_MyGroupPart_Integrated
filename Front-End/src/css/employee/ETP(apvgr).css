@@ -1,9 +1,7 @@
-/*no use*/
 
 
 /* Main content styles */
-/*
-.main-content-wrap-employee-task {
+.main-content-wrap {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -11,7 +9,7 @@
   justify-content: center;
   margin-top: 70px;
   margin-left: 235px;
-  margin-bottom: 50px;
+  margin-bottom: 250px;
 }
 
 .main-content {
@@ -22,89 +20,50 @@
   margin: 0 auto;
 }
 
-.progcrums{
-  width: 100%;
-}
-.progcrums .breadcrumb {
-  margin-top: 5px;
-  margin-left: 14px;
+/* Breadcrumb styles */
+.breadcrumb-wrap {
+  background-color: transparent;
+  margin-left: 5px;
 }
 
-@media (max-width: 768px) {
-  .show-sidebar {
-    display: block; 
-  }
+.breadcrumb {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-
-@media (max-width: 768px) {
-.card {
-    background-color: #C5C2C244 !important;
-  }
-
-  .main-content-wrap-employee-task {
-    margin-top: 100px;
-    margin-left: 0;
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  .main-content {
-    padding: 15px;
-    margin: 0 auto;
-  }
-
-  .centered-div {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  h2{
-    padding: 10px;
-    font-size: 24px !important;
-  }
-
-  .send-button {
-    width: 123px !important;
-    height: 47px !important;
-    top: 493px !important;
-    left: 160px !important;
-    padding: 18px 42px 18px 42px !important;
-    gap: 10px;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    border-radius: 10px !important;
-    font-family: Poppins !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    line-height: 30px !important;
-    letter-spacing: 0.1em !important;
-    text-align: center !important;
-    text-underline-position: from-font !important;
-    text-decoration-skip-ink: none !important;
-  }
-
-  #taskName {
-    height: 44.24px !important;
-    font-size: 12px !important;
-  }
-
-  #taskID {
-    height: 44.24px !important;
-    font-size: 12px !important;
-  }
-
-  #taskDescription {
-    height: 218.04px !important;
-    font-size: 12px !important;
-  }
-  
+.breadcrumb-item a {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+  text-decoration: none;
 }
 
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
 
+.breadcrumb .breadcrumb-item.active {
+  color: #24757E;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #24757E;
+  text-decoration: none;
+}
+
+/* Card styles */
 .card {
   border-radius: 15px;
   border: none;
@@ -113,6 +72,7 @@
 }
 
 
+/* Form styles */
 .form-label {
   font-weight: bold;
 }
@@ -121,7 +81,7 @@
   border-radius: 4px;
 }
 
-#taskName {
+#taskTitle {
   height: 64px;
   font-family: Poppins;
   font-size: 20px;
@@ -212,6 +172,7 @@
   background-position: center;
 }
 
+/*Buttons*/
 .back-button {
   background-color: #24757E;
   color: white;
@@ -224,8 +185,6 @@
   letter-spacing: 0.05em;
   width: 120px;
   height: 39px;
-  top: 246px;
-  left: 528px;
   gap: 0px;
 }
 
@@ -255,6 +214,7 @@
 }
 
 
+/*Other*/
 h2 {
   font-family: Poppins;
   font-size: 36px;
@@ -274,4 +234,70 @@ h2 {
   align-items: center;
   text-align: center;
 }
-  */
+
+/*mobile view*/
+@media (max-width: 768px) {
+  .card {
+      background-color: #C5C2C244 !important;
+    }
+  
+    .main-content-wrap {
+      margin-top: 100px;
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .main-content {
+      padding: 15px;
+      margin: 0 auto;
+    }
+  
+    .centered-div {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    h2{
+      padding: 10px;
+      font-size: 24px !important;
+    }
+  
+    .send-button {
+      width: 123px !important;
+      height: 47px !important;
+      top: 493px !important;
+      left: 160px !important;
+      padding: 18px 42px 18px 42px !important;
+      gap: 10px;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 10px !important;
+      font-family: Poppins !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      line-height: 30px !important;
+      letter-spacing: 0.1em !important;
+      text-align: center !important;
+      text-underline-position: from-font !important;
+      text-decoration-skip-ink: none !important;
+    }
+  
+    #taskTitle {
+      height: 44.24px !important;
+      font-size: 12px !important;
+    }
+  
+    #taskID {
+      height: 44.24px !important;
+      font-size: 12px !important;
+    }
+  
+    #taskDescription {
+      height: 218.04px !important;
+      font-size: 12px !important;
+    }
+    
+  }
+  
