@@ -14,7 +14,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 const EmployeeAddTaskProgress = () => {
     const [sidebarVisible, setSidebarVisible] = useState(false);
     const [taskData, setTaskData] = useState({
-        EmployeeID: '',
+        EmployeeID: '5', /* this is the already registed in the DB in employee table(employeeID7 alredy their in the db = ), default employee id, after integrate we need to send that perticuler ligged in exmployee ID - EmployeeID: '', */
         TaskName: '',
         TaskID: '',
         TaskDescription: '',
@@ -61,7 +61,7 @@ const EmployeeAddTaskProgress = () => {
                     TaskID: '',
                     TaskDescription: '',
                     Attachment: null,
-                    EmployeeID: '6', /* this is the default employee id, after integrate we need to send that perticuler ligged in exmployee ID */
+                    EmployeeID: '', 
                 });
             } else {
                 alert(result.message || 'Failed to Update the Task Progress.');
