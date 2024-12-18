@@ -66,6 +66,9 @@ const EmployeeAddTaskProgress = () => {
             } else {
                 alert(result.message || 'Failed to Update the Task Progress.');
             }
+
+            navigate('/employee-manage-task-prgress');
+
         } catch (error) {
             console.error('Error Updating the Task:', error);
             alert('An Error Occurred while Updating the Task Progress.');
