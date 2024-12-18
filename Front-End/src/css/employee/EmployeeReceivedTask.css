@@ -38,14 +38,6 @@
     border: 1px solid #ddd;
   }
 
-  /* Main container styling */
-.apwgr-recived-tasks-container {
-    padding: 20px;
-    /*background-color: #f8f9fa;*/
-    border-radius: 8px;
-    margin: 20px;
-    margin-left: 16%;
-  }
 
 
   .apwgr-tasks-container {
@@ -103,6 +95,15 @@
     background-color: #f1f1f1;
   }
   
+        /* Main container styling */
+        .apwgr-recived-tasks-container {
+          padding: 20px;
+          /*background-color: #f8f9fa;*/
+          border-radius: 8px;
+          margin: 20px;
+          margin-left: 16%;
+        }
+    
 
   
   /* Responsive Design */
@@ -111,9 +112,19 @@
         margin: 0%; /* Remove left margin for smaller screens */
         padding: 0%;
     }
+    
+
   }
 
+
+
   @media (max-width: 768px) {
+    .apwgr-recived-tasks-container {
+      padding: 0px;
+      margin: 0px;
+      margin-left: 0px;
+    }
+
   
     .apwgr-headManage h1{
       padding-top: 40px;
