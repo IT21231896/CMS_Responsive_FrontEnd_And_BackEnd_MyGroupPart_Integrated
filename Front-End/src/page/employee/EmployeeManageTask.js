@@ -1,4 +1,4 @@
-//employee manage tasks - in hear this ui shows the all the task that added by the admin to all employees
+//employee manage tasks progress - this ui shows the all the task progress that send by the employee
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -19,12 +19,12 @@ const EmployeeManageTask = () => {
     };
 
     const navigate = useNavigate();
-    const [tasks, setTasks] = useState([]);
+    const [TaskProgress, setTasks] = useState([]);
 
     // Fetch tasks from the API
     const fetchTasks = async () => {
         try {
-            const response = await axios.get('http://localhost:8800/employee/task/tasks'); //chenge this to proper employee routes
+            const response = await axios.get('http://localhost:8800/employee/task/sended-progress'); //chenge this to proper employee routes
             setTasks(response.data);
         } catch (error) {
             console.error('Error fetching tasks:', error);
@@ -43,13 +43,13 @@ const EmployeeManageTask = () => {
                 <nav className="breadcrumb" aria-label="breadcrumb">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a className="text-decoration-none" href="/employee-Dashboard">Home</a></li>
-                        <li className="breadcrumb-item active" aria-current="page">Manage Task</li>
+                        <li className="breadcrumb-item active" aria-current="page">Task Progress</li>
                     </ol>
                 </nav>
 
                 <div className="apwgr-tasks-container">
                     <div className='apwgr-headManage'>
-                        <h1 className="text-center">Manage Tasks</h1>
+                        <h1 className="text-center">Tasks Progresses</h1>
                     </div>
 
                     <header className="apwgr-tasks-header">
@@ -64,21 +64,16 @@ const EmployeeManageTask = () => {
                                     <th>Task ID</th>
                                     <th>Employee ID</th>
                                     <th>Task Name</th>
-                                    <th>Budget Info</th>
                                     <th>Description</th>
-                                    <th>Deadline</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {tasks.map((task) => (
-                                    <tr key={task.TaskID}>
-                                        <td>{task.TaskID}</td>
-                                        <td>{task.EmployeeID}</td>
-                                        <td>{task.TaskName}</td>
-                                        <td>{task.BudgetInfo}</td>
-                                        <td>{task.Description}</td>
-                                        <td>{new Date(task.Deadline).toISOString().split('T')[0]}</td>
-                
+                                {TaskProgress.map((TaskProgress) => (
+                                    <tr key={TaskProgress.TaskProgressID}>
+                                        <td>{TaskProgress.TaskID}</td>
+                                        <td>{TaskProgress.EmployeeID}</td>
+                                        <td>{TaskProgress.TaskName}</td>
+                                        <td>{TaskProgress.TaskDescription}</td>
                                     </tr>
                                 ))}
                             </tbody>

@@ -61,7 +61,7 @@ const EmployeeAddTaskProgress = () => {
                     TaskID: '',
                     TaskDescription: '',
                     Attachment: null,
-                    EmployeeID: '',
+                    EmployeeID: '6', /* this is the default employee id, after integrate we need to send that perticuler ligged in exmployee ID */
                 });
             } else {
                 alert(result.message || 'Failed to Update the Task Progress.');
@@ -99,9 +99,9 @@ const EmployeeAddTaskProgress = () => {
                 <div className="apwgr-add-task-container">
                     <div className="apwgr-content">
                         <form className="apwgr-task-form" onSubmit={handleSubmit}>
-                            <label>
+                            {/*<label>
                                 <input type="text" name="EmployeeID" placeholder="Employee ID" value={taskData.EmployeeID} onChange={handleInputChange} required />
-                            </label>
+                            </label>*/}
                             <label>
                                 <input type="text" name="TaskName" placeholder="Task Name" value={taskData.TaskName} onChange={handleInputChange} required />
                             </label>
