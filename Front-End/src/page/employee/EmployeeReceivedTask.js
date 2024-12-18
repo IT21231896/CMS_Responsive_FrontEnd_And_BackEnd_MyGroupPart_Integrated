@@ -58,7 +58,7 @@ const EmployeeReceivedTask = () => {
 
                     <div className="apwgr-emp-back-button-area">
                         <div className="apwgr-but-inside">
-                            <button className="btn back-btn my-3" onClick={() => navigate('/employee-manage-task-prgress')}>
+                            <button className="btn apwgr-back-btn my-3" onClick={() => navigate('/employee-manage-task-prgress')}>
                                 <span className="bi bi-arrow-left m-3"> Back </span>
                             </button>
                         </div>
