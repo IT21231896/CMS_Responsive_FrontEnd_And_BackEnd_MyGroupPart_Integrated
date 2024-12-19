@@ -85,7 +85,7 @@ export default function AdminReceivedTask() {
                     <td>{task.TaskID}</td>
                     <td>{task.EmployeeID}</td>
                     <td>{task.TaskName}</td>
-                    <td>{task.Description}</td>
+                    <td>{task.TaskDescription}</td>
 
                     <td>
                       <div className="text-center">
