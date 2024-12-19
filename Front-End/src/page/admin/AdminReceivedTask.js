@@ -56,7 +56,7 @@ export default function AdminReceivedTask() {
 
 
       <div class='apwgr-container2  '>
-        <div>
+        <div className='addtop'>
           <h1 class="text-center">Received Task </h1>
         </div>
         <div>

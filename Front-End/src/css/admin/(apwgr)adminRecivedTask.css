@@ -174,10 +174,18 @@ h1 {
     position: absolute;
    
   }
-  
-  
+  .addtop{
+    margin-top: 0px !important;
+   }
+   .addgap{
+    margin-bottom: 0% !important;
+   }
  }
  
  .addgap{
   margin-bottom: 40px;
+ }
+
+ .addtop{
+  margin-top: -18px;
  }
