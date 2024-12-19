@@ -57,8 +57,8 @@ const EmployeeManageTask = () => {
                         <button className="apwgr-progress-btn" onClick={() => navigate('/employee-recived-task')}>Received Tasks</button>
                     </header>
 
-                    <div className="apwgr-tasks-table-container">
-                        <table className="apwgr-tasks-table">
+                    <div className="apwgr-tasks-prog-table-container">
+                        <table className="apwgr-tasks-prog-table">
                             <thead>
                                 <tr>
                                     <th>Task ID</th>

@@ -1,17 +1,17 @@
 /*Scroll css add final*/
 
-.apwgr-tasks-table-container {
+.apwgr-tasks-prog-table-container {
     max-height: 400px; /* Adjust height as needed */
     overflow-y: auto;
     border: 1px solid #ddd;
   }
   
-  .apwgr-tasks-table {
+  .apwgr-tasks-prog-table {
     width: 100%;
     border-collapse: collapse;
   }
   
-  .apwgr-tasks-table th, .apwgr-tasks-table td {
+  .apwgr-tasks-prog-table th, .apwgr-tasks-prog-table td {
     padding: 8px 12px;
     text-align: left;
     border: 1px solid #ddd;
@@ -73,7 +73,7 @@
   }
   
   /* Table styling */
-  .apwgr-tasks-table {
+  .apwgr-tasks-prog-table {
     width: 100%;
     border-collapse: collapse;
     background: white;
@@ -83,20 +83,20 @@
     border: 5 solid black; /* Ensures the table has an outer black border */
   }
   
-  .apwgr-tasks-table th,
-  .apwgr-tasks-table td {
+  .apwgr-tasks-prog-table th,
+  .apwgr-tasks-prog-table td {
     padding: 12px 15px;
     text-align: left;
     border: 1px solid black; /* Black border for table cells */
   }
   
-  .apwgr-tasks-table th {
+  .apwgr-tasks-prog-table th {
     width: 10px;
     background-color: #d2d2d2;
     color: rgb(9, 0, 0);
   }
   
-  .apwgr-tasks-table tr:hover {
+  .apwgr-tasks-prog-table tr:hover {
     background-color: #f1f1f1;
   }
   
