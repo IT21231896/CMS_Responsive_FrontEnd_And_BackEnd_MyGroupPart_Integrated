@@ -67,7 +67,7 @@ export default function AdminReceivedTask() {
         </div>
 
 
-          <div className="apwgr-tasks-table-container">
+          <div className="apwgr-tasks-table-container addgap">
             <table className="apwgr-tasks-table">
               <thead>
                 <tr>
