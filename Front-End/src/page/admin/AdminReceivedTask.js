@@ -60,7 +60,7 @@ export default function AdminReceivedTask() {
           <h1 class="text-center">Received Task </h1>
         </div>
         <div>
-          <button class="btn btn-primary my-3" onClick={() => navigate('/admin-manage-task')}>
+          <button class="btn apwgr-back-btn my-3" onClick={() => navigate('/admin-manage-task')}>
             <span class="bi bi-arrow-left-circle m-0 text-white"></span>
             <span class="ms-2">Back</span>
           </button>
