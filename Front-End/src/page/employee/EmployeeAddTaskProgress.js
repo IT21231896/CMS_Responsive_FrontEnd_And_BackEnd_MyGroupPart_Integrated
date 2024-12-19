@@ -31,7 +31,7 @@ const EmployeeAddTaskProgress = () => {
       formData.append('TaskID', TaskID);
       formData.append('EmployeeID', EmployeeID);
       formData.append('TaskName', TaskName);
-      formData.append('Description', TaskDescription);
+      formData.append('TaskDescription', TaskDescription);
   
       if (file) { // If a file is selected, append it to the FormData
         formData.append('Attachment', file);
