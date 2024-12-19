@@ -66,17 +66,16 @@ export default function AdminReceivedTask() {
           </button>
         </div>
 
-        <div class="apwgr-table-container">
-          <div className="apwgr-table-responsive">
-            <table className="table  table-bordered">
-              <thead>
-                <tr class="apwgr-table-light">
-                  <th className="small-width">Task ID</th>
-                  <th className="small-width">Employer ID</th>
-                  <th className="large-width">Task Name</th>
-                  <th className="large-width">Description</th>
-                  <th className="small-width">Attachment</th>
 
+          <div className="apwgr-tasks-table-container">
+            <table className="apwgr-tasks-table">
+              <thead>
+                <tr>
+                  <th>Task ID</th>
+                  <th>Employee ID</th>
+                  <th>Task Name</th>
+                  <th>Description</th>
+                  <th>Attachment</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,7 +85,6 @@ export default function AdminReceivedTask() {
                     <td>{task.EmployeeID}</td>
                     <td>{task.TaskName}</td>
                     <td>{task.TaskDescription}</td>
-
                     <td>
                       <div className="text-center">
                         <span className="d-block mt-1">
@@ -107,15 +105,14 @@ export default function AdminReceivedTask() {
                         )}
                       </div>
                     </td>
-
-
                   </tr>
                 ))}
               </tbody>
-
             </table>
           </div>
-        </div>
+
+
+  
 
       </div>
 
